@@ -1,0 +1,11 @@
+node_modules/
+.vscode/
+npm-debug.log
+*.sublime-project
+.idea
+.bat
+debug.log
+yarn-error.log
+dist/
+webpack.alias.config.js
+
