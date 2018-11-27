@@ -4,6 +4,8 @@
   "description": "## 计划 - 了解es6编译之后的代码 - 深入练习异步等操作",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/104gogo/es6-test/issues"
   },
-  "homepage": "https://github.com/104gogo/es6-test#readme"
+  "homepage": "https://github.com/104gogo/es6-test#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
 }
