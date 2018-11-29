@@ -1,1 +1,1 @@
-Promise.resolve(1).then(console.log)
+const a = new Promise(() => {});
