@@ -7,5 +7,6 @@ npm-debug.log
 debug.log
 yarn-error.log
 dist/
+lib/
 webpack.alias.config.js
 

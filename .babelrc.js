@@ -3,17 +3,20 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        targets: {
-          browsers: [
-            '>1%',
-            'last 1 versions',
-            'Firefox ESR',
-            'not ie < 9',
-          ]
-        },
+        // targets: {
+        //   browsers: [
+        //     '>1%',
+        //     'last 1 versions',
+        //     'Firefox ESR',
+        //     'not ie < 9',
+        //   ]
+        // },
         // targets: {
         //   "chrome": "58",
         // },
+        targets: {
+          node: '5',
+        },
         useBuiltIns: 'usage',
         debug: true
       }
