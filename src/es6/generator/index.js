@@ -1,5 +1,3 @@
-function* helloWorldGenerator() {
-  yield 'hello';
-  yield 'world';
-  return 'ending';
-}
+import './1.js';
+import './2.js';
+
