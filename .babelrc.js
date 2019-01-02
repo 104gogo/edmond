@@ -20,7 +20,8 @@ module.exports = {
         useBuiltIns: 'usage',
         debug: true
       }
-    ]
+    ],
+    "@babel/preset-react"
   ],
   plugins: [
     [
