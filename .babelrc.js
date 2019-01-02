@@ -21,7 +21,6 @@ module.exports = {
         // debug: true
       }
     ],
-    "@babel/preset-react"
   ],
   plugins: [
     [
@@ -33,12 +32,5 @@ module.exports = {
         useESModules: false
       }
     ],
-    [
-      'import',
-      {
-        libraryName: 'antd',
-        style: true,
-      }
-    ]
   ]
 }
