@@ -9,4 +9,4 @@ yarn-error.log
 dist/
 lib/
 webpack.alias.config.js
-
+package-lock.json
