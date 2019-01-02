@@ -1,7 +1,7 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { Layout } from './components';
+import router from './router';
 import '../src/es5/array';
 import '../src/es6/let';
 import '../src/es6/object';
@@ -12,7 +12,7 @@ import '../src/es6/async';
 
 ReactDOM.render((
   <Layout>
-
+    {router}
   </Layout>
 ), document.getElementById('root'));
 
