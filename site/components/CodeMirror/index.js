@@ -1,4 +1,4 @@
-export default ({ children }) => {
+export default () => {
   return (
     <div>
       32132
