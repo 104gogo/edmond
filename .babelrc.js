@@ -18,7 +18,7 @@ module.exports = {
           node: '5',
         },
         useBuiltIns: 'usage',
-        debug: true
+        // debug: true
       }
     ],
     "@babel/preset-react"
@@ -31,6 +31,13 @@ module.exports = {
         helpers: false,
         regenerator: true,
         useESModules: false
+      }
+    ],
+    [
+      'import',
+      {
+        libraryName: 'antd',
+        style: true,
       }
     ]
   ]

@@ -10,5 +10,9 @@ import '../src/es6/promise';
 import '../src/es6/generator';
 import '../src/es6/async';
 
-ReactDOM.render(<Layout />, document.getElementById('root'));
+ReactDOM.render((
+  <Layout>
+
+  </Layout>
+), document.getElementById('root'));
 

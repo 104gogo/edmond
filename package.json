@@ -1,10 +1,11 @@
 {
   "name": "es6-test",
   "version": "1.0.0",
-  "description": "## 计划 - 了解es6编译之后的代码 - 深入练习异步等操作",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js",
+    "start1": "node scripts/dev.js",
     "build": "webpack --config webpack.config.prod.js",
     "node": "babel src --out-dir lib",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,17 +27,25 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
+    "af-webpack": "^1.3.1",
+    "antd": "^3.11.6",
     "babel-loader": "^8.0.4",
+    "babel-plugin-import": "^1.11.0",
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/runtime": "^7.2.0",
-    "@babel/runtime-corejs2": "^7.2.0"
+    "@babel/runtime-corejs2": "^7.2.0",
+    "autoprefixer": "^9.4.3",
+    "css-loader": "^2.1.0",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0"
   }
 }

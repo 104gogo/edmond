@@ -1,3 +1,15 @@
 import React from 'react';
+import { Layout } from 'antd';
 
-export default () => <div>312</div>;
+const { Header, Content } = Layout;
+
+export default ({ children }) => {
+  return (
+    <>
+      <Header />
+      <Content>
+        {children}
+      </Content>
+    </>
+  );
+};
