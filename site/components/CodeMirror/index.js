@@ -8,7 +8,10 @@ export default class CodeMirror extends React.Component {
   }
 
   componentDidMount() {
+    const { value, options } = this.props;
+
     const editor = window.CodeMirror.fromTextArea(this.codemirror.current, {
+      value,
       lineNumbers: true, // 显示行数
       indentUnit: 2, // 缩进单位为2
       styleActiveLine: true, // 当前行背景高亮
@@ -16,7 +19,7 @@ export default class CodeMirror extends React.Component {
       mode: 'javascript', // javascript模式
       lineWrapping: true, // 自动换行
       theme: 'monokai', // 使用monokai模版
-      height: '100%',
+      ...options,
     });
   }
 
