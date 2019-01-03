@@ -32,14 +32,27 @@ module.exports = {
         test: /\.less$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          { loader: 'postcss-loader', options: {
-            plugins: [
-              require('precss'),
-              require('autoprefixer')
-            ]}
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            }
           },
-          { loader: 'less-loader', options: { javascriptEnabled: true } }
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                require('precss'),
+                require('autoprefixer')
+              ]
+            }
+          },
+          {
+            loader: 'less-loader',
+            options: {
+              javascriptEnabled: true
+            }
+          }
         ],
       },
     ]

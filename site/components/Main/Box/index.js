@@ -1,9 +1,7 @@
-import React from 'react';
+import styles from './index.less';
 
-export default ({ children }) => {
-  return (
-    <div>
-      {children}
-    </div>
-  );
-};
+export default ({ children }) => (
+  <div className={styles.content}>
+    {children}
+  </div>
+);
