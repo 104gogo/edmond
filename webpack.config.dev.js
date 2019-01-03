@@ -60,6 +60,7 @@ module.exports = {
   devServer: {
     port: '8899',
     contentBase: './site',
+    stats: 'minimal',
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -8,7 +8,7 @@ export default class CodeMirror extends React.Component {
   }
 
   componentDidMount() {
-    const { value, options } = this.props;
+    const { value, options, onChange } = this.props;
 
     const editor = window.CodeMirror.fromTextArea(this.codemirror.current, {
       value,
@@ -20,6 +20,11 @@ export default class CodeMirror extends React.Component {
       lineWrapping: true, // 自动换行
       theme: 'monokai', // 使用monokai模版
       ...options,
+    });
+
+    editor.on('change', (codemirror) => {
+      const text = codemirror.getValue();
+      onChange && onChange(text);
     });
   }
 
