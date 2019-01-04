@@ -1,4 +1,3 @@
-import cookie from 'js-cookie';
 import { HOST } from '../configs/constants';
 
 function checkStatus(response) {

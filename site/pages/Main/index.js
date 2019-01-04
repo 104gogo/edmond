@@ -1,8 +1,8 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, message } from 'antd';
 
 import { CodeMirror } from '../../components';
-import { request } from '../../utils';
+import { request, catchEval } from '../../utils';
 import styles from './index.less';
 
 export default class Main extends React.Component {
@@ -12,12 +12,18 @@ export default class Main extends React.Component {
   };
 
   handleChange = async (value) => {
-    const { content } = await request('/transform', {
+    const { content, status, errorMsg } = await request('/transform', {
       method: 'post',
       body: JSON.stringify({ code: value }),
     });
 
-    this.setState({ transformCode: content });
+    if (status === 'error') {
+      message.error('代码转译失败！');
+      console.error(errorMsg);
+    } else {
+      this.setState({ transformCode: content || '' });
+      catchEval(content);
+    }
   }
 
   render() {
