@@ -1,6 +1,6 @@
 import styles from './index.less';
 
-export default class CodeMirror extends React.Component {
+export default class CodeMirror extends React.PureComponent {
   constructor(props) {
     super(props);
 

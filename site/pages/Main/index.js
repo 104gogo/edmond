@@ -22,7 +22,7 @@ export default class Main extends React.Component {
       console.error(errorMsg);
     } else {
       this.setState({ transformCode: content || '' });
-      catchEval(content);
+      catchEval(value);
     }
   }
 
