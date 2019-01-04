@@ -16,14 +16,12 @@ export default class Main extends React.Component {
       method: 'post',
       body: JSON.stringify({ code: value }),
     });
-    console.log('content', content);
 
     this.setState({ transformCode: content });
   }
 
   render() {
     const { code, transformCode } = this.state;
-    console.log('transformCode', transformCode);
 
     return (
       <div className={styles.content}>

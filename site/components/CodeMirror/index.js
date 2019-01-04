@@ -19,7 +19,7 @@ export default class CodeMirror extends React.Component {
       matchBrackets: true, // 括号匹配
       mode: 'javascript', // javascript模式
       lineWrapping: true, // 自动换行
-      theme: 'monokai', // 使用monokai模版
+      theme: 'midnight', // 使用midnight主题
       ...options,
     });
 
