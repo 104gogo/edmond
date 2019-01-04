@@ -6,12 +6,14 @@
     "import/no-extraneous-dependencies": 0,
     "react/react-in-jsx-scope": 0,
     "react/prop-types": 0,
-    "no-unused-expressions": 0
+    "no-unused-expressions": 0,
+    "import/prefer-default-export": 0
   },
   "globals": {
     "document": true,
     "React": true,
-    "window": true
+    "window": true,
+    "fetch": true
   },
   "parserOptions": {
     "ecmaFeatures": {

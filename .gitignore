@@ -8,4 +8,6 @@ debug.log
 yarn-error.log
 dist/
 /lib
+package-lock.json
+
 

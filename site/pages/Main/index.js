@@ -2,19 +2,28 @@ import React from 'react';
 import { Row, Col } from 'antd';
 
 import { CodeMirror } from '../../components';
+import { request } from '../../utils';
 import styles from './index.less';
 
 export default class Main extends React.Component {
-  // static getDerivedStateFromProps(props, state) {
-  //   return {};
-  // }
+  state = {
+    code: '',
+    transformCode: '',
+  };
 
-  handleChange = (value) => {
+  handleChange = async (value) => {
+    const { content } = await request('/transform', {
+      method: 'post',
+      body: JSON.stringify({ code: value }),
+    });
+    console.log('content', content);
 
+    this.setState({ transformCode: content });
   }
 
   render() {
-    const { code, transformCode } = this.props;
+    const { code, transformCode } = this.state;
+    console.log('transformCode', transformCode);
 
     return (
       <div className={styles.content}>

@@ -4,13 +4,14 @@ export default class CodeMirror extends React.Component {
   constructor(props) {
     super(props);
 
+    this.editor = null;
     this.codemirror = React.createRef();
   }
 
   componentDidMount() {
     const { value, options, onChange } = this.props;
 
-    const editor = window.CodeMirror.fromTextArea(this.codemirror.current, {
+    this.editor = window.CodeMirror.fromTextArea(this.codemirror.current, {
       value,
       lineNumbers: true, // 显示行数
       indentUnit: 2, // 缩进单位为2
@@ -22,10 +23,18 @@ export default class CodeMirror extends React.Component {
       ...options,
     });
 
-    editor.on('change', (codemirror) => {
+    this.editor.on('change', (codemirror) => {
       const text = codemirror.getValue();
       onChange && onChange(text);
     });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { value } = this.props;
+
+    if (nextProps.value !== value) {
+      this.editor.setValue(nextProps.value);
+    }
   }
 
   render() {
