@@ -1,7 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -21,56 +19,15 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader'
-        ]
-      },
-      {
-        test: /\.less$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: [
-                require('precss'),
-                require('autoprefixer')
-              ]
-            }
-          },
-          {
-            loader: 'less-loader',
-            options: {
-              javascriptEnabled: true
-            }
-          }
-        ],
-      },
     ]
   },
   devServer: {
     port: '8899',
     contentBase: './site',
-    stats: 'minimal',
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'site/index.html'
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'index.css',
-    }),
-    new webpack.ProvidePlugin({
-      React: 'react',
     }),
   ]
 };
