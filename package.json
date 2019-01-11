@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --config webpack.config.dev.js",
     "start1": "node scripts/dev.js",
     "build": "webpack --config webpack.config.prod.js",
-    "node": "babel src --out-dir lib",
+    "node": "rimraf lib && babel src --out-dir lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
