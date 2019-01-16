@@ -3,22 +3,28 @@ module.exports = {
     [
       '@babel/preset-env',
       {
+        // targets: {
+        //   browsers: [
+        //     '>1%',
+        //     'last 1 versions',
+        //     'Firefox ESR',
+        //     'not ie < 9',
+        //   ]
+        // },
         targets: {
-          browsers: [
-            '>1%',
-            'last 1 versions',
-            'Firefox ESR',
-            'not ie < 9',
-          ]
+          "chrome": "58",
         },
         // targets: {
-        //   "chrome": "58",
+        //   "ie": "9",
         // },
+        // targets: ['iOS >= 8', 'Android >= 4'],
         // targets: {
         //   node: '5',
         // },
-        useBuiltIns: 'usage',
-        // debug: true
+        // useBuiltIns: 'usage',
+        useBuiltIns: 'entry',
+        // useBuiltIns: false,
+        debug: true
       }
     ],
   ],
