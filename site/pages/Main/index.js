@@ -36,7 +36,7 @@ export default class Main extends React.Component {
             <CodeMirror value={code} onChange={this.handleChange} />
           </Col>
           <Col span={12} className={styles.col}>
-            <CodeMirror value={transformCode} options={{ theme: 'neo', lineNumbers: false, readOnly: 'nocursor' }} />
+            <CodeMirror value={transformCode} options={{ theme: 'neo', lineNumbers: false, readOnly: true }} />
           </Col>
         </Row>
       </div>

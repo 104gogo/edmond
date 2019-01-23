@@ -1,9 +1,8 @@
-var id = 1;
+id = 1;
+// var id = 1;
 
-function foo() {
+(function() {
   setTimeout(() => {
     console.log(this.id);
-  }, 100);
-}
-
-foo();
+  }, 0);
+})();
