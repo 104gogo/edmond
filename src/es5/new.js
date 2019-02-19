@@ -11,13 +11,13 @@ function Otaku (name, age) {
 Otaku.prototype.getAge = function () {};
 
 function objectFactory() {
-  var obj = new Object();
+  var obj = new Object(); // 创建一个新对象
 
-  var Constructor = [].shift.call(arguments);
+  var Constructor = [].shift.call(arguments); // 获取构造函数
 
-  obj.__proto__ = Constructor.prototype;
+  obj.__proto__ = Constructor.prototype; // 链接原型链
 
-  var ret = Constructor.apply(obj, arguments);
+  var ret = Constructor.apply(obj, arguments); // 执行构造函数，绑定 this 为新的对象
 
   return typeof ret === 'object' ? ret : obj;
 }
