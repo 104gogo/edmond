@@ -1,5 +1,6 @@
 const arr = [1, 2, 3];
 
+// 不能中断循环
 arr.forEach((x) => {
   if (x === 1) {
     console.log('forEach return success!');
@@ -8,6 +9,7 @@ arr.forEach((x) => {
   console.log('forEach return failed!');
 });
 
+// 不能中断循环，并且报错
 arr.forEach((x) => {
   if (x === 1) {
     console.log('forEach break success!');
@@ -16,6 +18,7 @@ arr.forEach((x) => {
   console.log('forEach break failed!');
 });
 
+// 不能中断循环
 arr.map((x) => {
   if (x === 1) {
     console.log('map return success!');
@@ -24,6 +27,7 @@ arr.map((x) => {
   console.log('map return failed!');
 });
 
+// 不能中断循环，并且报错
 arr.map((x) => {
   if (x === 1) {
     console.log('map return success!');
