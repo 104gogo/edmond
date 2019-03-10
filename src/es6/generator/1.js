@@ -4,5 +4,5 @@ function *foo() {
 }
 
 const gen = foo();
-gen.next();
-gen.next();
+var a = gen.next().value;
+gen.next(a);
