@@ -1,9 +1,4 @@
-const sum = (...args) => {
-  return args.reduce((total, num) => {
-    total += num;
-    return total;
-  });
-}
+const sum = (...args) => args.reduce((total, num) => total + num);
 
 function add(...args1) {
   const total = sum(...args1);
