@@ -14,6 +14,7 @@ function bar(name, age) {
 bar.prototype.friend = 'kevin';
 
 /**
+ * 思路：
  * 1.绑定this
  * 2.能接受参数
  * 3.返回一个绑定函数

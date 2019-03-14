@@ -1,3 +1,6 @@
+/**
+ * 原型链
+ */
 function A() {}
 function B() {}
 Object.prototype.aa = () => console.log('aa');

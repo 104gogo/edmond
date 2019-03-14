@@ -1,3 +1,9 @@
+/**
+ * 思路：
+ * 1.返回一个函数 temp
+ * 2.temp 函数返回自身
+ * 3.当累计的参数等于总参数的时候，才执行柯里化的函数
+ */
 function curry(func) {
   let args = [];
   function temp() {

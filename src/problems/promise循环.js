@@ -1,5 +1,8 @@
-// promise 各种循环写法
-// 问题：请求一本书，然后每一段文字都要去单独请求，使用 promise 实现
+/**
+ * promise 各种循环写法
+ * 问题：请求一本书，然后每一段文字都要去单独请求，使用 promise 实现
+ * 参考：https://developers.google.com/web/fundamentals/primers/promises#_9
+ */
 
 const data = [
   { url: '1', time: 1000 },

@@ -1,4 +1,10 @@
-// 模拟 promise.all 的实现
+/**
+ * 模拟 promise.all 的实现
+ * 思路：
+ * 1.并发执行所有的 promise
+ * 2.收集执行结果
+ * 3.当所有的都成功执行了，结束
+ */
 function promiseAll(arr) {
   const temp = [];
   const len = arr.length;

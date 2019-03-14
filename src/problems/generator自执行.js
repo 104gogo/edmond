@@ -1,3 +1,6 @@
+/**
+ * https://github.com/104gogo/Invoker/blob/master/%E6%96%87%E7%AB%A0/%E9%9A%8F%E7%8C%BF/async%20%E6%AF%94%20generator%20%E5%A4%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F.md
+ */
 function run(cb) {
   const gen = cb();
 

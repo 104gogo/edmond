@@ -11,6 +11,7 @@ function foo(name, age) {
 // foo.call(a);
 
 /**
+ * 思路：
  * call 和 apply 方法可以转换为如下代码，即：使用 a 来调用 foo
 */
 // const a = {

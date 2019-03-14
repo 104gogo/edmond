@@ -10,6 +10,14 @@ function Otaku (name, age) {
 
 Otaku.prototype.getAge = function () {};
 
+/**
+ * 思路：
+ * 1.创建一个新对象
+ * 2.获取构造函数
+ * 3.链接原型链
+ * 4.执行构造函数，绑定 this 为新的对象
+ * 5.返回对象或者构造函数的返回值
+ */
 function objectFactory() {
   var obj = new Object(); // 创建一个新对象
 
