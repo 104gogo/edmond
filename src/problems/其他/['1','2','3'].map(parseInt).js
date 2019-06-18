@@ -5,4 +5,5 @@
 // 变形
 const unary = fn => val => fn(val);
 const parse = unary(parseInt);
+console.log(['1', '2', '3'].map(parse));
 console.log(['1.1', '2', '0.3'].map(parse));
