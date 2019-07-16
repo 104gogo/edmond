@@ -28,3 +28,12 @@ new Promise((resolve, reject) => {
 // }).then(() => console.log(1), () => console.log(2)) // 1
 //   .then(() => console.log(3), () => console.log(4)) // 3
 //   .catch(({ message }) => console.log(message)); // 获不到异步的 throw 的 Error
+
+
+// new Promise((resolve) => {
+//   throw Error('eee');
+//   resolve();
+//   // throw Error('eee');
+// }).catch(e => {
+//   console.log(e);
+// })
