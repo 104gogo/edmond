@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+      }
+      .content {
+        flex-grow: 1;
+        display: flex;
+      }
+      .content .left, .content .right {
+        width: 100px;
+        height: 100%;
+      }
+      .content .center {
+        flex-grow: 1;
+      }
+      .content .left {
+        background: green;
+      }
+      .content .right {
+        background: blue;
+      }
+      .header, .footer {
+        height: 100px;
+      }
+      .header {
+        background: red;
+      }
+      .footer {
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">100px</div>
+      <div class="content">
+        <div class="left">100px</div>
+        <div class="center">center</div>
+        <div class="right">100px</div>
+      </div>
+      <div class="footer">100px</div>
+    </div>
+  </body>
+</html>

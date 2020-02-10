@@ -9,5 +9,4 @@ yarn-error.log
 dist/
 /lib
 package-lock.json
-
-
+.DS_Store
